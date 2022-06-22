@@ -69,7 +69,7 @@
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
                 <span>Consulta de Vendas</span>
               </a>
-              <a href="/ControledeProduto.php" class="nav-link px-3">
+              <a href="webproject/ControledeProduto.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
                 <span>Controle de Produtos</span>
               </a>
