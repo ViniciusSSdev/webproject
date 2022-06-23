@@ -1,14 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+<body>
+
 <?php
 
-function login(){
-    include "_scripts/config.php";
-  
-    $sql = "SELECT * FROM `user`";
-    $query = $mysqli->query($sql);
-    $dados = $query->fetch_array();
 
-    return $dados;
-}
+
+
+function login($dados){
+    include "C:/xampp/htdocs/webproject/_scripts/config.php";
+    
+    $sql = "SELECT * FROM user";
+    $query = $mysqli->query($sql);
+        foreach($query as $row)
+        {
+            echo "Id is ".$row['name']."<br>";
+        }
+    }
 
 
 function cadDisciplina($dados){

@@ -32,33 +32,3 @@
   </div>
 </form>
 
-<?php 
-
-if(!empty($_POST['nome'])){
-
-  if(cadastrar($_POST)){ ?>        
-
-    <script language='javascript'>
-      swal.fire({ 
-        icon:"success",
-        text: "Feito com Sucesso!",
-        type: "success"}).then(okay => {
-          if (okay) {
-            window.location.href = "painel.php?r=";
-          }
-        });
-      </script>
-      <?php }else{ ?>
-          <script language='javascript'>
-      swal.fire({ 
-        icon:"error",
-        text: "Ops! Ouve um erro.",
-        type: "success"}).then(okay => {
-          if (okay) {
-            window.location.href = "painel.php?r=";
-          }
-        });
-      </script>
- <?php } 
-}
-?>
