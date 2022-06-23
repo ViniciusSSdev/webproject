@@ -77,6 +77,6 @@
 
 <?php 
 
-
+var_dump(login());
 
 ?>

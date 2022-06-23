@@ -1,8 +1,7 @@
 <?php
 
-function cadastrar($dados){
+function login(){
     include "_scripts/config.php";
-
   
     $sql = "SELECT * FROM `user`;";
     $query = $mysqli->query($sql);
