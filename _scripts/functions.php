@@ -14,19 +14,28 @@
 
 <?php
 
+if(isset($_POST['email']) && isset($_POST['senha'])) { 
+    require "config.php";
+    require "Usuario.class.php";
 
-
-
-function login($dados){
-    include "C:/xampp/htdocs/webproject/_scripts/config.php";
+    $u = new Usuario();
     
-    $sql = "SELECT * FROM user";
-    $query = $mysqli->query($sql);
-        foreach($query as $row)
-        {
-            echo "Id is ".$row['name']."<br>";
-        }
-    }
+    $email = addslashes($_POST['email']);
+    $senha = addslashes($_POST['senha']);
+   
+  if($u->login($email, $senha) == true){
+      if(isset($_SESSION['iduser'])){
+        header("location: http://localhost/webproject%20(1)/webproject/adminview.php");
+
+      }else{
+        header("location: http://localhost/webproject%20(1)/webproject/views/login.php");
+      }
+
+  }else{
+    header("location: http://localhost/webproject%20(1)/webproject/views/login.php");
+}
+}
+
 
 
 function cadDisciplina($dados){

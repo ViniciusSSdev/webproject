@@ -1,10 +1,20 @@
 <?php
+
+session_start();
+
 $servidor = 'localhost';
 $usuario = 'root';
 $senha = '';
 $banco = 'webproject';
+
+global $pdo;
 // Conecta-se ao banco de dados MySQL
-$mysqli = new mysqli($servidor, $usuario, $senha, $banco);
-// Caso algo tenha dado errado, exibe uma mensagem de erro
-if (mysqli_connect_errno()) trigger_error(mysqli_connect_error());
+try{
+$pdo = new PDO("mysql:dbname=".$banco."; host=".$servidor, $usuario, $senha);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+    echo "ERRO: ".$e->getmessage();
+    exit;
+
+}
 ?>

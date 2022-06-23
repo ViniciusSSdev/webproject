@@ -30,7 +30,7 @@
 
 
   <body class="text-center">
-    <form class="vh-100" style="background-color: #2a2933;">
+    <form action="../_scripts/functions.php" method="POST" class="vh-100" style="background-color: #2a2933;">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col col-xl-10">
@@ -43,7 +43,7 @@
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
                   <div class="card-body p-4 p-lg-5 text-black">
     
-                    <form action="" method="post">
+                    <form action="../_scripts/functions.php" method="POST">
                       <hr class="divider-horizontal-blurry" />
                       <div class="d-flex align-items-center mb-3 pb-1">
                         <i class="fas fa-cubes fa-4x me-3" style="color: #ff6219;"></i>
@@ -58,7 +58,7 @@
     
                       <div class="form-outline mb-4">
                         <label class="form-label">Senha</label>
-                        <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Senha" required />
+                        <input type="password" name="senha" id="password" class="form-control form-control-lg" placeholder="Senha" required />
                       </div>
                       <div class="pt-1 mb-4 shadow-5">
                         <button class="btn btn-dark btn-lg btn-block " id="btn" type="submit" onclick="">Login</button>
@@ -79,9 +79,3 @@
 </html>
 
 
-<?php 
-
-var_dump($_GET);
-
-
-?>
