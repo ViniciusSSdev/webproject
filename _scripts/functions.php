@@ -3,7 +3,7 @@
 function login(){
     include "_scripts/config.php";
   
-    $sql = "SELECT * FROM `user`;";
+    $sql = "SELECT * FROM `user`";
     $query = $mysqli->query($sql);
 
     return $query;
