@@ -5,8 +5,9 @@ function login(){
   
     $sql = "SELECT * FROM `user`";
     $query = $mysqli->query($sql);
+    $dados = $query->fetch_array();
 
-    return $query;
+    return $dados;
 }
 
 
