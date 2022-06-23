@@ -61,7 +61,12 @@
                         <button class="btn btn-dark btn-lg btn-block " id="btn" type="button">Login</button>
           
                       </div>
-                      <p class="mt-5 mb-3 text-muted">Senai Project &copy; 2022</p>
+                      <p class="mt-5 mb-3 text-muted">
+                      <?php 
+
+var_dump(login());
+
+?>Senai Project &copy; 2022</p>
                       <hr class="divider-horizontal-blurry" /> 
                     </form>
                   </div>
@@ -75,8 +80,4 @@
   </body>
 </html>
 
-<?php 
 
-var_dump(login());
-
-?>
