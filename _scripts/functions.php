@@ -25,14 +25,14 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
    
   if($u->login($email, $senha) == true){
       if(isset($_SESSION['iduser'])){
-        header("location: http://localhost/webproject%20(1)/webproject/adminview.php");
+        header("location: ../adminview.php");
 
       }else{
-        header("location: http://localhost/webproject%20(1)/webproject/views/login.php");
+        header("location: ../views/login.php");
       }
 
   }else{
-    header("location: http://localhost/webproject%20(1)/webproject/views/login.php");
+    header("location: ../views/login.php");
 }
 }
 
