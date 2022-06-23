@@ -3,14 +3,8 @@
 function cadastrar($dados){
     include "_scripts/config.php";
 
-    $aluno = $dados['nome'];
-    $dt_nascimento = $dados['dt_nascimento'];
-    $nome_mae = $dados['nome_mae'];
-    $cpf = $dados['cpf'];
-    $bairro = $dados['bairro'];
-    $sexo = $dados['sexo'];
-   
-    $sql = "INSERT INTO cadaluno (aluno,mae,cpf,bairro,sexo,data_nascimento) VALUES ('$aluno','$nome_mae','$cpf','$bairro','$sexo','$dt_nascimento')";
+  
+    $sql = "SELECT * FROM `user`;";
     $query = $mysqli->query($sql);
 
     return $query;
