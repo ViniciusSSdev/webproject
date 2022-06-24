@@ -1,7 +1,7 @@
 <?php 
 
-require "_scripts/Produto.class.php";
-require "_scripts/config.php";
+require "../_scripts/Produto.class.php";
+require "../_scripts/config.php";
 
 $e = new Produto();
 $busca = $e->estoque();
@@ -14,14 +14,14 @@ $busca = $e->estoque();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="_css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../_css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="_css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="_css/style.css" />
-    <title>Admin Control</title>
+    <link rel="stylesheet" href="../_css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="../_css/style.css" />
+    <title>Editar Produto</title>
   </head>
   <body>
     <!-- top navigation bar -->
@@ -39,7 +39,7 @@ $busca = $e->estoque();
         <a
           class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
           href="#"
-          >ADMIN HOME</a
+          >Editar produto</a
         >
         <button
           class="navbar-toggler"
@@ -63,7 +63,7 @@ $busca = $e->estoque();
         <nav class="navbar-dark">
           <ul class="navbar-nav">
             <li>
-              <a href="#" class="nav-link px-3 active">
+              <a href="../Vendedorview.php" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-house-door-fill"></i></span>
                 <span>Início</span>
               </a>
@@ -75,13 +75,13 @@ $busca = $e->estoque();
               </div>
             </li>
             <li>
-              <a href="/webproject/administradorVIew/editarProduto.php" class="nav-link px-3">
+              <a href="../adminview.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>Editar Produtos</span>
+                <span>Consulta de Vendas</span>
               </a>
-              <a href="/webproject/administradorVIew/cadastroProduto.php" class="nav-link px-3">
+              <a href="cadastroProduto.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>Adicionar Produtos</span>
+                <span>Adicionar Produto</span>
               </a>
             </li>
             <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
@@ -89,27 +89,9 @@ $busca = $e->estoque();
         </nav>
       </div>
     </div>
-    <!---->
+    <!-- offcanvas -->
     <main class="mt-5 pt-3">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <h4>Dados</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-10 mb-3">
-            <div class="card h-100">
-              <div class="card-header">
-                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                Teste Quantidade de Produtos disponíveis
-              </div>
-              <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="row">
           <div class="col-md-12 mb-3">
             <div class="card">
@@ -130,6 +112,8 @@ $busca = $e->estoque();
                         <th>Valor</th>
                         <th>Quantidade</th>
                         <th>Data de inclusão</th>
+                        <th>Atualizar Quantidade</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -140,19 +124,20 @@ $busca = $e->estoque();
                         <td><?php echo $busca[$indice]['valor_produto'];?></td>
                         <td><?php echo $busca[$indice]['quantidade_produto'];?></td>
                         <td><?php echo $busca[$indice]['data'];?></td>
+                        <td>
+                        <div class="form-outline">
+                        <input type="number" id="typeNumber" class="form-control" />
+                        <label class="form-label" for="typeNumber"></label>
+                        </div>
+                        </td>
+                        <td><button type="button" class="btn btn-danger">Deletar</button></td>
                       </tr>
                       <?php } ?>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <th>ID</th>
-                        <th>Produto</th>
-                        <th>Valor</th>
-                        <th>Quantidade</th>
-                        <th>Data de inclusão</th>
-                      </tr>
-                    </tfoot>
                   </table>
+                  <div class="d-md-flex justify-content-md-end">
+                  <button type="button" class="btn btn-success btn-lg">Atualizar</button>
+                  </div>
                 </div>
               </div>
             </div>
