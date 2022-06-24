@@ -1,13 +1,3 @@
-<?php 
-
-require "_scripts/Produto.class.php";
-require "_scripts/config.php";
-
-$e = new Produto();
-$busca = $e->estoque();
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -125,31 +115,65 @@ $busca = $e->estoque();
                   >
                     <thead>
                       <tr>
-                        <th>ID</th>
                         <th>Produto</th>
-                        <th>Valor</th>
-                        <th>Quantidade</th>
-                        <th>Data de inclusão</th>
+                        <th>Tipo</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <?php foreach ($busca as $indice => $value){ ?>
                       <tr>
-                        <td><?php echo $busca[$indice]['id_produto'];?></td>
-                        <td><?php echo $busca[$indice]['nome_produto'];?></td>
-                        <td><?php echo $busca[$indice]['valor_produto'];?></td>
-                        <td><?php echo $busca[$indice]['quantidade_produto'];?></td>
-                        <td><?php echo $busca[$indice]['data'];?></td>
+                        <td>Matue</td>
+                        <td>Vendedor de ervas</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
                       </tr>
-                      <?php } ?>
+                      <tr>
+                        <td>Thiago Aquino</td>
+                        <td>Cantor</td>
+                        <td>Tokyo</td>
+                        <td>63</td>
+                        <td>2011/07/25</td>
+                        <td>$170,750</td>
+                      </tr>
+                      <tr>
+                        <td>João Gomes</td>
+                        <td>Cantor</td>
+                        <td>San Francisco</td>
+                        <td>66</td>
+                        <td>2009/01/12</td>
+                        <td>$86,000</td>
+                      </tr>
+                      <tr>
+                        <td>Yudi</td>
+                        <td>Vendendor de Games</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                      </tr>
+                      <tr>
+                        <td>Robsão</td>
+                        <td>Cantor</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td>2008/11/28</td>
+                        <td>$162,700</td>
+                      </tr>
+                      <tr>
                     </tbody>
                     <tfoot>
                       <tr>
-                        <th>ID</th>
-                        <th>Produto</th>
-                        <th>Valor</th>
-                        <th>Quantidade</th>
-                        <th>Data de inclusão</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
                       </tr>
                     </tfoot>
                   </table>
@@ -168,5 +192,4 @@ $busca = $e->estoque();
     <script src="./js/script.js"></script>
   </body>
 </html>
-
-
+bla bla denovo

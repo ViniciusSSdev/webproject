@@ -17,23 +17,15 @@
 if(isset($_POST['email']) && isset($_POST['senha'])) { 
     require "config.php";
     require "Usuario.class.php";
-    require "Produto.class.php";
 
     $u = new Usuario();
     
-    
     $email = addslashes($_POST['email']);
     $senha = addslashes($_POST['senha']);
-
    
   if($u->login($email, $senha) == true){
       if(isset($_SESSION['iduser'])){
-        if($_SESSION['nivel'] = '1') {
-            header("location: ../adminview.php");
-        } else {
-            header("location: ../vendedorview.php");
-        }
-
+        header("location: ../adminview.php");
 
       }else{
         header("location: ../views/login.php");
@@ -43,8 +35,6 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
     header("location: ../views/login.php");
 }
 }
-
-
 
 
 
