@@ -63,7 +63,7 @@ $busca = $e->estoque();
         <nav class="navbar-dark">
           <ul class="navbar-nav">
             <li>
-              <a href="../Vendedorview.php" class="nav-link px-3 active">
+              <a href="../adminview.php" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-house-door-fill"></i></span>
                 <span>Início</span>
               </a>

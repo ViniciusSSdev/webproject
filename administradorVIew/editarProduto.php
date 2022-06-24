@@ -63,7 +63,7 @@ $busca = $e->estoque();
         <nav class="navbar-dark">
           <ul class="navbar-nav">
             <li>
-              <a href="../Vendedorview.php" class="nav-link px-3 active">
+              <a href="../adminview.php" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-house-door-fill"></i></span>
                 <span>Início</span>
               </a>
@@ -112,8 +112,8 @@ $busca = $e->estoque();
                         <th>Valor</th>
                         <th>Quantidade</th>
                         <th>Data de inclusão</th>
+                        <th>Atualizar Valor</th>
                         <th>Atualizar Quantidade</th>
-                        
                       </tr>
                     </thead>
                     <tbody>
@@ -126,7 +126,13 @@ $busca = $e->estoque();
                         <td><?php echo $busca[$indice]['data'];?></td>
                         <td>
                         <div class="form-outline">
-                        <input type="number" id="typeNumber" class="form-control" />
+                        <input type="number" id="typeNumber" class="form-control" placeholder=" Novo valor" />
+                        <label class="form-label" for="typeNumber"></label>
+                        </div>
+                        </td>
+                        <td>
+                        <div class="form-outline">
+                        <input type="number" id="typeNumber" class="form-control" placeholder=" Nova Quanidade"/>
                         <label class="form-label" for="typeNumber"></label>
                         </div>
                         </td>
