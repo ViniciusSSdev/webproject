@@ -75,13 +75,13 @@ $busca = $e->estoque();
               </div>
             </li>
             <li>
-              <a href="#" class="nav-link px-3">
+              <a href="/webproject/administradorVIew/editarProduto.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>Consulta de Vendas</span>
+                <span>Editar Produtos</span>
               </a>
-              <a href="/webproject/ControledeProduto.php" class="nav-link px-3">
+              <a href="/webproject/administradorVIew/cadastroProduto.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>Controle de Produtos</span>
+                <span>Adicionar Produtos</span>
               </a>
             </li>
             <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
