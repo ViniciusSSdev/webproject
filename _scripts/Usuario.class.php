@@ -9,15 +9,17 @@ class Usuario{
          $sql->bindValue("email", $email);
          $sql->bindValue("senha", $senha);
          $sql->execute();
-
          if($sql->rowCount() > 0 ){
              $dado = $sql->fetch();
 
              $_SESSION['iduser'] = $dado['id'];
-             return true;
+
+             $_SESSION['nivel'] = $dado['nivel'];
+             
+             return True;
          }else{
              return false;
-         }
+         }         
 
          }
 

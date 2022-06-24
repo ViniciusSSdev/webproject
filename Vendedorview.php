@@ -1,3 +1,13 @@
+<?php 
+
+require "_scripts/Venda.class.php";
+require "_scripts/config.php";
+
+$v = new Venda();
+$venda = $v->vender();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -115,65 +125,31 @@
                   >
                     <thead>
                       <tr>
+                        <th>ID</th>
                         <th>Produto</th>
-                        <th>Tipo</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Quantidade vendida</th>
+                        <th>Valor da venda</th>
+                        <th>Data da venda</th>
                       </tr>
                     </thead>
                     <tbody>
+                      <?php foreach ($venda as $indice => $value){ ?>
                       <tr>
-                        <td>Matue</td>
-                        <td>Vendedor de ervas</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
+                        <td><?php echo $venda[$indice]['id_venda'];?></td>
+                        <td><?php echo $venda[$indice]['produto_venda'];?></td>
+                        <td><?php echo $venda[$indice]['quantidade_venad'];?></td>
+                        <td><?php echo $venda[$indice]['valor_venda'];?></td>
+                        <td><?php echo $venda[$indice]['data'];?></td>
                       </tr>
-                      <tr>
-                        <td>Thiago Aquino</td>
-                        <td>Cantor</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
-                      </tr>
-                      <tr>
-                        <td>João Gomes</td>
-                        <td>Cantor</td>
-                        <td>San Francisco</td>
-                        <td>66</td>
-                        <td>2009/01/12</td>
-                        <td>$86,000</td>
-                      </tr>
-                      <tr>
-                        <td>Yudi</td>
-                        <td>Vendendor de Games</td>
-                        <td>Edinburgh</td>
-                        <td>22</td>
-                        <td>2012/03/29</td>
-                        <td>$433,060</td>
-                      </tr>
-                      <tr>
-                        <td>Robsão</td>
-                        <td>Cantor</td>
-                        <td>Tokyo</td>
-                        <td>33</td>
-                        <td>2008/11/28</td>
-                        <td>$162,700</td>
-                      </tr>
-                      <tr>
+                      <?php } ?>
                     </tbody>
                     <tfoot>
                       <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Quantidade vendda</th>
+                        <th>Valor da venda</th>
+                        <th>Data da veda</th>
                       </tr>
                     </tfoot>
                   </table>
