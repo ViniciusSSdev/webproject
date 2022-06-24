@@ -89,7 +89,7 @@ $busca = $e->estoque();
         </nav>
       </div>
     </div>
-    <!-- offcanvas -->
+    <!---->
     <main class="mt-5 pt-3">
       <div class="container-fluid">
         <div class="row">
